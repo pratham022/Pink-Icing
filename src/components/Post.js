@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import lehenga1 from '../images/lehenga1.jpg'
 
 import app_logo from '../images/app_logo.jpeg';
 
@@ -14,7 +15,7 @@ export default function Post() {
       <CardMedia
         component="img"
         height="140"
-        image={app_logo}
+        image={lehenga1}
         alt="green iguana"
       />
       <CardContent>

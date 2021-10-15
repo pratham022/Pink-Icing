@@ -9,7 +9,8 @@ function Routing() {
         <div>
           <Navbar/>
           <Switch>
-              <Route path='/home' exact component={Home} ></Route>          
+              <Route path='/home' exact component={Home} ></Route>  
+              <Route path='/profile' exact component={Profile} ></Route>        
           </Switch>
           
         </div>
