@@ -11,8 +11,8 @@ function App() {
       <header className="App-header">
         <Navbar />
         <Switch>
-              <Route path='/home' exact component={Home} ></Route>
-              <Route path='/profile' exact component={Profile} ></Route>          
+              <Route path='/home' exact component={Home} ></Route>        
+              <Route path='/profile' exact component={Profile} ></Route> 
         </Switch>
       </header>
     </div>
