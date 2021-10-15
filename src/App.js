@@ -5,10 +5,8 @@ import Routing from './Routing';
 
 function App() {
   return (
-    <div style={{ backgroundColor: "#FAE8E0" }}>
-      <BrowserRouter>
+    <div className="App">
         <Routing/>
-      </BrowserRouter>
     </div>
   );
 }
