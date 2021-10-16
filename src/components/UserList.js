@@ -5,6 +5,8 @@ import { withStyles } from "@material-ui/core/styles";
 import IndividualUser from './IndividualUser';
 import ChatScreen from './ChatScreen';
 
+import { boutiques } from '../Data/boutiques';
+
 const styles = theme => ({ 
     cardContainer: {
         margin: "1rem",
@@ -27,12 +29,12 @@ const UserList = (props) => {
     return (
         <div className={classes.cardContainer}>
             <div className={classes.userListContainer}>
-                <IndividualUser />
-                <IndividualUser />
-                <IndividualUser />
-                <IndividualUser />
-                <IndividualUser />
-                <IndividualUser />
+                {boutiques.map(boutique => (
+                    <IndividualUser 
+                        boutiqueName={boutique.name}
+                        selected={boutique.name == 'VEEKA Boutique' ? true : false}
+                    />
+                ))}
             </div>
             <div className={classes.chatScreenContainer}>
                 <ChatScreen />

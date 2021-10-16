@@ -6,12 +6,13 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-export default function IndividualUser() {
+export default function IndividualUser({ boutiqueName, selected }) {
+  console.log(selected)
   return (
-    <Card sx={{ minWidth: 275, marginTop: "0.4rem", cursor: "pointer" }}>
+    <Card sx={{ minWidth: 275, marginTop: "0.4rem", cursor: "pointer", backgroundColor: selected && '	#D3D3D3' }}>
       <CardContent>
         <Typography variant="h5" component="div">
-          Name
+          {boutiqueName}
         </Typography>
       </CardContent>
     </Card>

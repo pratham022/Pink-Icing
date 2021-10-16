@@ -11,6 +11,7 @@ import UserList from './components/UserList';
 
 
 import BoutiquesList from './components/BoutiquesList';
+import UserList from './components/UserList';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
               <Route path='/boutiques' exact component={BoutiquesList} ></Route>
               <Route path='/messages' exact component={UserList}></Route> 
               <Route path='/boutiques/:id' exact component={Profile}></Route>
-              <Route path='/' exact component={Home} ></Route>
+              <Route path='/messages' exact component={UserList}></Route>
         </Switch>
       </header>
     </div>
