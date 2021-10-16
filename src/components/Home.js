@@ -10,6 +10,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import CustomerPost from './CustomerPost';
+import posts2 from '../Data/customerPost';
 
 
 const styles = theme => ({ 
@@ -32,10 +34,10 @@ const Home = (props) => {
 
     return (
         <div>
-            <div>
-                <Box sx={{ maxWidth: 120 }}>
+            <div style={{display:"flex",justifyContent:'center',alignContent:'center'}}>
+                <Box  sx={{ width: 120 }}>
                 <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                    <InputLabel id="demo-simple-select-label">Category</InputLabel>
                     <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
@@ -51,6 +53,9 @@ const Home = (props) => {
                 </Box>
             </div>
             <div className={classes.cardContainer}>
+
+                {category=='All'&& (
+                <>
                 {posts.map(post => (
                     <IndividualPost 
                         key={post.id} 
@@ -58,6 +63,35 @@ const Home = (props) => {
                         description={post.description.slice(0, 140)} 
                         boutiqueId={post.boutiqueId}/>
                 ))}
+                {posts2.map(post=>(
+                    <CustomerPost
+                        post={post}
+                    />
+                ))}
+                   </>
+                )}
+
+            {category=='Boutique'&& (
+                <>
+                {posts.map(post => (
+                    <IndividualPost 
+                        key={post.id} 
+                        pics={post.images} 
+                        description={post.description.slice(0, 140)} 
+                        boutiqueId={post.boutiqueId}/>
+                ))}
+                   </>
+                )}
+
+                {category=='Customer'&& (
+                <>
+                {posts2.map(post=>(
+                    <CustomerPost
+                        post={post}
+                    />
+                ))}
+                   </>
+                )}
             </div>
         </div>
     )
