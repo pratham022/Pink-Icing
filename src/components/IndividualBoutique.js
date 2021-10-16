@@ -6,10 +6,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Chip from '@mui/material/Chip';
+import { Link } from 'react-router-dom';
 
 export default function IndividualBoutique(props) {
 
-    const { pic, name, bio, services } = props;
+    const { pic, name, bio, services, id } = props;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -35,7 +36,9 @@ export default function IndividualBoutique(props) {
         </div>
       </CardContent>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button size="small" style={{ margin: "1rem" }}>Learn More</Button>
+        <Link to={`boutiques/${id}`} style={{ textDecoration: 'none' }}>
+          <Button size="small" style={{ margin: "1rem" }}>Learn More</Button>
+        </Link>
       </div>
     </Card>
   );

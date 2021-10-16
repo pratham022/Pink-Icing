@@ -30,6 +30,7 @@ const BoutiquesList = (props) => {
                     pic={boutique.photo} 
                     bio={boutique.bio}
                     services={boutique.services}
+                    id={boutique.id}
                 />
             ))}
         </div>

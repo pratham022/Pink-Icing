@@ -1,6 +1,7 @@
-import  boutique4  from '../images/boutique4.png'
+import boutique4  from '../images/boutique4.png'
 import boutique3 from '../images/boutique3.png'
 import boutique2 from '../images/boutique2.png'
+import boutique1 from '../images/boutique1.jpg'
 const boutiques = [
     {
         id: 1,
@@ -20,13 +21,13 @@ const boutiques = [
         ],
         mission: "Rachana Collections provides customer satisfaction for our world-class customers at a reasonable price.",
         specialities: "Exclusive collection of designer kurtis, dress materials, silk sarees, paithani and leggings. Do come and explore the lifestyle.",
-        photo: "/static/media/boutique1.4fabbd92.jpg"
+        photo: boutique1
     },
     {
         id: 2,
         name: "VEEKA Boutique",
         phone: "7734442323",
-        email: "sia@gmail.com",
+        email: "veeka@gmail.com",
         address: "Vastushree complex ‘C’ wing, shop no. 45-46,near pitale nagar society Near Hyde Park society, Market Yard, Pune",
         bio: "VEEKA is customer centric and always will be aiming to provide best possible services to our customers with more convenient way. We always seek some new ideas and advices from our customer so that our customer can say proudly that they are not customers they are VEEKA family, VEEKA is just not a company, it’s a family of priceless customers. ",
         services: [
@@ -40,7 +41,7 @@ const boutiques = [
         ],
         mission: "VEEKA Collections provides customer satisfaction for our world-class customers at a reasonable price.",
         specialities: "Exclusive collection of designer kurtis, dress materials, silk sarees, paithani and leggings. Do come and explore the lifestyle.",
-        photo: "/static/media/boutique2.51a2bb56.png"
+        photo: boutique2
     },
     {
         id: 3,
@@ -48,7 +49,7 @@ const boutiques = [
         phone: "7734442393",
         email: "sunshine@gmail.com",
         address: "Vastushree complex ‘C’ wing, shop no. 45-46,near pitale nagar society Near Hyde Park society, Market Yard, Pune",
-        bio: "Shivane’s Boutique is a fashion boutique for fashion lovers and trend-breaking women all over the globe. When it comes to online shopping for women looking for the latest fashion trends, we are a one-stop destination",
+        bio: "Sunshine Boutique is a fashion boutique for fashion lovers and trend-breaking women all over the globe. When it comes to online shopping for women looking for the latest fashion trends, we are a one-stop destination",
         services: [
             "Saree Collection",
             "Salwar Materials",
@@ -59,7 +60,7 @@ const boutiques = [
         ],
         mission: "Every new term in season brings fresh and latest fashion for women and it becomes equally important for you to keep up with it",
         specialities: "We have all the right options for you ranging from: Kanchipuram/ Kanjivaram silk sarees, silk sarees, handloom silk sarees, salwar material and readymade salwar. You name it we have it!",
-        photo: "/static/media/boutique3.45dd3333.png"
+        photo: boutique3
     },
     {
         id: 4,
@@ -77,7 +78,7 @@ const boutiques = [
         ],
         specialities: "Classy Missi is committed to bringing you the best selection of dresses, hand designed and produced by Pratima Anand. The collection hugely draws its inspiration from Parisian culture with party, evening silhouettes and surface ornamentation.",
         mission: "Classy Missi’s collection aims to make your little princess embrace her individuality.",
-        photo: "/static/media/boutique4.5ca905eb.png"
+        photo: boutique4
     },
 ]
 
