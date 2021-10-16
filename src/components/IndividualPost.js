@@ -17,6 +17,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import lehenga1 from '../images/lehenga1.jpg'
 import lehenga2 from '../images/lehenga2.jpg'
 
+import Carousel from 'react-material-ui-carousel'
+
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
     return <IconButton {...other} />;
@@ -28,9 +30,6 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-  
-  
-
 function IndividualPost() {
 
     const [expanded, setExpanded] = React.useState(false);
@@ -38,6 +37,17 @@ function IndividualPost() {
     const handleExpandClick = () => {
       setExpanded(!expanded);
     };
+
+    var items = [
+        {
+            name: "Random Name #1",
+            description: "Probably the most random thing you have ever seen!"
+        },
+        {
+            name: "Random Name #2",
+            description: "Hello World!"
+        }
+    ]
 
     return (
         <div>
@@ -56,11 +66,20 @@ function IndividualPost() {
                     title="Bridal Velvet Lehenga"
                     subheader="September 14, 2016"
                 />
-                <img
+                <Carousel>
+                    <img
 
-                    src={lehenga1}
+                        src={lehenga1}
+                        alt="Bridal Lehenga"
+                        style={{ height: "300px", width: "200px" }}
+                    />
+                    <img
+
+                    src={lehenga2}
                     alt="Bridal Lehenga"
-                />
+                    style={{ height: "300px", width: "200px" }}
+                    />
+                </Carousel>
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">
                     Maroon velvet wedding lehenga choli lining designed

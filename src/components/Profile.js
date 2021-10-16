@@ -106,7 +106,7 @@ const styles = theme => ({
 function Profile(props) {
 
     const {classes, theme} = props;
-    const [value, setValue] = React.useState(2);
+    const [value, setValue] = React.useState(4);
 
     return (
         <div className={classes.mainContainer}>
