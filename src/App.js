@@ -8,7 +8,7 @@ import AddCustomerPost from './components/AddCustomerPost';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import AddBoutiquePost from './components/AddBoutiquePost';
 
-import Profile from './components/Profile'
+
 import BoutiquesList from './components/BoutiquesList';
 
 
