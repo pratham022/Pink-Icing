@@ -57,7 +57,7 @@ function IndividualPost() {
                     subheader="September 14, 2016"
                 />
                 <img
-
+                    style={{height:"30vh",width:"20vw"}}
                     src={lehenga1}
                     alt="Bridal Lehenga"
                 />
