@@ -17,6 +17,10 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import lehenga1 from '../images/lehenga1.jpg'
 import lehenga2 from '../images/lehenga2.jpg'
 
+import { boutiques } from '../Data/boutiques'
+
+import Carousel from 'react-material-ui-carousel'
+
 const ExpandMore = styled((props) => {
     const { expand, ...other } = props;
     return <IconButton {...other} />;
@@ -28,10 +32,17 @@ const ExpandMore = styled((props) => {
     }),
   }));
 
-  
-  
+function IndividualPost(props) {
+    
+    const { id, pics, description, boutiqueId } = props
 
-function IndividualPost() {
+    let boutique = boutiques.filter(item => {
+        if(item.id == boutiqueId)
+            return item
+    })
+    boutique = boutique[0]
+
+    console.log(boutique)
 
     const [expanded, setExpanded] = React.useState(false);
 
@@ -39,13 +50,24 @@ function IndividualPost() {
       setExpanded(!expanded);
     };
 
+    var items = [
+        {
+            name: "Random Name #1",
+            description: "Probably the most random thing you have ever seen!"
+        },
+        {
+            name: "Random Name #2",
+            description: "Hello World!"
+        }
+    ]
+
     return (
         <div>
-            <Card style={{width:"60vw"}}>
+            <Card style={{maxWidth:"30vw"}}>
                 <CardHeader
                     avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-                        A
+                        {boutique.name[0]}
                     </Avatar>
                     }
                     action={
@@ -53,19 +75,22 @@ function IndividualPost() {
                         <MoreVertIcon />
                     </IconButton>
                     }
-                    title="Bridal Velvet Lehenga"
+                    title={boutique.name}
                     subheader="September 14, 2016"
                 />
-                <img
-                    style={{height:"30vh",width:"20vw"}}
-                    src={lehenga1}
-                    alt="Bridal Lehenga"
-                />
+                <Carousel>
+                    {pics.map(pic => (
+                        <img
+                            key={pic}
+                            src={pic}
+                            alt="Post Picture"
+                            style={{ height: "300px", width: "200px" }}
+                        />
+                    ))}
+                </Carousel>
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">
-                    Maroon velvet wedding lehenga choli lining designed
-                     with embroidery, resham, zari, bead, lace and patch border work. 
-                     Available with matching blouse. (Slight variation in color is possible.)
+                        {description}
                     </Typography>
                 </CardContent>
                 <CardActions disableSpacing>

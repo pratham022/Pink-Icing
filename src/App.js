@@ -8,6 +8,10 @@ import AddCustomerPost from './components/AddCustomerPost';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import AddBoutiquePost from './components/AddBoutiquePost';
 
+import Profile from './components/Profile'
+import BoutiquesList from './components/BoutiquesList';
+
+
 function App() {
   return (
     <div className="App">
@@ -15,9 +19,10 @@ function App() {
         <Navbar />
         <Switch>
               <Route path='/home' exact component={Home} ></Route>        
-              <Route path='/profile' exact component={Profile} ></Route> 
               <Route path='/addCustPost' exact component={AddCustomerPost}></Route>
               <Route path='/addBoutiquePost' exact component={AddBoutiquePost}></Route>
+              <Route path='/boutiques' exact component={BoutiquesList} ></Route> 
+              <Route path='/boutiques/:id' exact component={Profile}></Route>
         </Switch>
       </header>
     </div>

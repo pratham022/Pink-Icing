@@ -22,6 +22,10 @@ import boutique1 from '../images/boutique1.jpg';
 import Post from './Post';
 import IndividualPost from './IndividualPost'
 
+import { boutiques } from '../Data/boutiques';
+import { useParams } from 'react-router-dom';
+import { posts } from '../Data/posts';
+
 const labels = {
     0.5: 'Useless',
     1: 'Useless+',
@@ -88,48 +92,53 @@ const styles = theme => ({
         height:"20vh"
     },
     post:{
-        [theme.breakpoints.up("sm")]: 
-            {
-                margin: "1rem",
-                display: "grid",
-                gap: "1rem",
-                gridTemplateColumns: "1fr  "
-            },
-    [theme.breakpoints.down("sm")]: 
-    {
-
+        margin: "1rem",
+        display: "grid",
+        gap: "1rem",
+        gridTemplateColumns: "1fr 1fr"
     }
-}
    
 });
 
 function Profile(props) {
 
+    let { id } = useParams();
     const {classes, theme} = props;
-    const [value, setValue] = React.useState(2);
+    const [value, setValue] = React.useState(4);
 
+    let boutique = boutiques.filter(item => {
+        if(item.id == id)
+            return item
+    })
+    boutique = boutique[0]
+
+    const boutiquePosts = posts.filter(item => {
+        if(item.boutiqueId == id)
+            return item
+    })
+    console.log(boutiquePosts)
     return (
         <div className={classes.mainContainer}>
             <Card className={classes.profileCard}>
                 {/** Image */}
                 <div>
-                    <img  className={classes.logo} src={logo1} alt="lehenga"/>
+                    <img  className={classes.logo} src={boutique.photo} alt="lehenga"/>
                 </div>
                 {/**Description */}
                 <div className={classes.description}>
-                    <div>Athithis The Ladies Wear</div>
+                    <div>{boutique.name}</div>
                     <div>
                         <Typography component="legend">Rating</Typography>
                         <Rating name="read-only" value={value} readOnly />
                     </div>
                     <div className={classes.contactInfo}>
-                          <PhoneAndroidIcon/> 7774442323
+                          <PhoneAndroidIcon/> {boutique.phone}
                     </div>
                     <div className={classes.emailInfo}>
-                        <EmailIcon/> athithis@gmail.com
+                        <EmailIcon/> {boutique.email}
                     </div>
                     <div className={classes.addressInfo}>
-                        <LocationOnIcon/> Near Mata Mandir, Chawla sq, Jaripatka Ngp
+                        <LocationOnIcon/> {boutique.address.slice(0, 54)}
                     </div>
                 </div>
                 
@@ -142,62 +151,35 @@ function Profile(props) {
                     {/**About Section */}
                     <div className={classes.aboutDescription}>
                             <span>
-                            <h2>Athithis The Ladies Wear</h2>
-                            <h6>- (Plot No. 69,  Near Mata Mandir, Chawla sq, Jaripatka Ngp)</h6>
+                            <h2>{boutique.name}</h2>
+                            <h6>- {boutique.address}</h6>
 
-                            <h4>Athithis Collections is a famous women's clothing store in Jaripatka
-                                Nagar for best quality of designer kurtis,
-                            dress materials, silk sarees, paithani, leggings and more.</h4>
+                            <h4>{boutique.bio.slice(0, 159)}</h4>
 
                                 <div>
                                 <h3>Our Services:-</h3>
                                 <List >
                                 <Divider />
+                                {boutique.services.map(service => (
+                                    <>
                                     <ListItem disablePadding>
-                                        <ListItemText primary="Exclusive Collection of Designer Kurtis" />
+                                        <ListItemText primary={service} />
                                     </ListItem>
                                     <Divider />
-                                    <ListItem disablePadding>
-                                        <ListItemText primary="Designer Suits" />
-                                    </ListItem>
-                                    <Divider />
-                                    <ListItem disablePadding>
-                                        <ListItemText primary="Dress Materials" />
-                                    </ListItem>
-                                    <Divider />
-                                    <ListItem disablePadding>
-                                        <ListItemText primary="Silk Sarees" />
-                                    </ListItem>
-                                    <Divider />
-                                    <ListItem disablePadding>
-                                        <ListItemText primary="Paithani" />
-                                    </ListItem>
-                                    <Divider />
-                                    <ListItem disablePadding>
-                                        <ListItemText primary="Tops" />
-                                    </ListItem>
-                                    <Divider />
-                                    <ListItem disablePadding>
-                                        <ListItemText primary="Leggings" />
-                                    </ListItem>
-                                    <Divider />
+                                    </>
+                                ))}
+
                                 </List>
                                 </div>
-                               
-
                                 <div>
                                <h3> Our Mission:-</h3>
-
-                                Rachana Collections provides customer satisfaction 
-                                for our world-class customers at a reasonable price.
+                               {boutique.mission}
                                 </div>
 
                                 <div>
                                 <h3>Specialties:-</h3>
-                                Exclusive collection of designer kurtis, dress materials, 
-                                silk sarees, paithani and leggings
+                                {boutique.specialities}
                                 </div>
-
                                 <div>
                                 Do come and explore the lifestyle.
                                 </div>
@@ -206,7 +188,13 @@ function Profile(props) {
                    
             </Card>
             <div className={classes.post}>
-                    <IndividualPost/>
+                    {boutiquePosts.map(post => (
+                        <IndividualPost 
+                        key={post.id} 
+                        pics={post.images} 
+                        description={post.description.slice(0, 140)} 
+                        boutiqueId={post.boutiqueId}/>
+                    ))}
             </div>
         </div>
     )
