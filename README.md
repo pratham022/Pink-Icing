@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Pink Icing: Sew In Style
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inspiration:
+* In Today's world, custom attire is more in demand as compared to ready made clothes. People tend to design their clothes for several occasions like weddings,house-warmings and other gatherings.
+* Most presumably, ten years back, if you needed to consider getting your garments customized custom, you would have been unyielding about it costing you a bomb. 
+* Introductions of Boutiques have given people the choice to customize their designs according to their needs and get their dresses ready with satisfying cost and desired look. However reaching out to the required Boutique can be quite difficult . 
+* Thus having an online platform where we can have all the boutiques present at one place that can look at our required design and provide us with the best would ease our task as well as benefit the boutique owners.
+* The Boutique owner will have a unique platform where they can post their designs and attract the customers and thus have better deals and make better business.
 
-## Available Scripts
+## What it does
+* Customers can specify their requirements or post a hand made sketch of the designs that they want . 
+* They can also post photos of dresses that they have seen online and wish to buy or stitch them.
+* All the interested  boutiques can reach out to the customers and provide them with best deals that they can offer.
+* They can maybe call or have a meeting or meet in person with the boutique head to know more about the design.
+* The boutique owners can also post photos of their latest designs and attract  the customers.
+* The boutique can also have several other products in their shop like jewellery set or weight gain or loss products or cosmetics they can also advertise through it.
+* The website will have a messaging system for seamless communication between the customer and the boutique owner. 
 
-In the project directory, you can run:
+## How we built it
+* React, Material UI
 
-### `npm start`
+## Challenges we ran into
+* Knowing the requirements of the Boutique and Customers and presenting them on the online platform.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Accomplishments that we're proud of
+* Completing and submitting the project on time.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## What we learned
+* This was the first Hackathon for us.We both learned how to better coordinate our workflow and make a standalone product within a time limit.
 
-### `npm test`
+## What's next for Pink Icing
+We will add some more features to the project like:
+* Placing the order and tracking it
+* Providing a better UI for creating custom designs for the customers
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
